@@ -1,0 +1,42 @@
+// assets/script.js
+document.addEventListener("DOMContentLoaded", () => {
+  // Reveal animations
+  const els = document.querySelectorAll(".reveal");
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add("in");
+    });
+  }, { threshold: 0.12 });
+
+  els.forEach(el => obs.observe(el));
+
+  // Simple contact form toast (no backend)
+  const form = document.querySelector("#contactForm");
+  if (form) {
+    form.addEventListener("submit", (ev) => {
+      ev.preventDefault();
+
+      const name = (form.querySelector("input[name='name']")?.value || "").trim();
+      const email = (form.querySelector("input[name='email']")?.value || "").trim();
+      const message = (form.querySelector("textarea[name='message']")?.value || "").trim();
+
+      const toast = document.querySelector("#toast");
+      if (!toast) return;
+
+      // Basic checks
+      if (!name || !email || !message) {
+        toast.classList.add("show");
+        toast.querySelector("strong").textContent = "Oups — champs manquants";
+        toast.querySelector("p").textContent = "Ajoute ton nom, ton email et un message, puis réessaie.";
+        return;
+      }
+
+      toast.classList.add("show");
+      toast.querySelector("strong").textContent = "Message prêt à être envoyé";
+      toast.querySelector("p").textContent = "Cette démo n’envoie pas réellement le mail. Connecte-la à ton backend ou à un service (ex: Formspree) pour recevoir les demandes.";
+
+      // Reset (optional)
+      form.reset();
+    });
+  }
+});
