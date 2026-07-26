@@ -1,136 +1,134 @@
+<!-- contact.html -->
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — MC G. S.</title>
-  <meta name="description" content="Contacte MC G. S. : formulaire et coordonnées." />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MC G. S. — Contact</title>
+  <meta name="description" content="Contacte MC G. S. : formulaire de demande de devis." />
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-  <a class="skip-link" href="#main">Aller au contenu</a>
+  <div class="nav-wrap">
+    <div class="container">
+      <nav class="nav" aria-label="Navigation principale">
+        <a class="brand" href="index.html">
+          <div class="logo" aria-hidden="true"></div>
+          <div class="brand-title">
+            <strong>MC G. S.</strong>
+            <span>Cyber Tehk • Dev Web</span>
+          </div>
+        </a>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <span class="brand-mark" aria-hidden="true">◆</span>
-        <span class="brand-text">MC G. S.</span>
-      </a>
-
-      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-nav">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav id="site-nav" class="site-nav" aria-label="Navigation principale">
-        <a href="index.html">Accueil</a>
-        <a href="services.html">Services</a>
-        <a href="realisations.html">Réalisations</a>
-        <a href="a-propos.html">À propos</a>
-        <a href="contact.html" class="active">Contact</a>
+        <div class="nav-links">
+          <a class="nav-link" href="services.html">Services</a>
+          <a class="nav-link" href="realisations.html">Réalisations</a>
+          <a class="nav-link" href="a-propos.html">À propos</a>
+          <a class="nav-link nav-cta" href="contact.html">Contact</a>
+        </div>
       </nav>
     </div>
-    <div class="header-glow" aria-hidden="true"></div>
-  </header>
+  </div>
 
-  <main id="main">
-    <section class="page-hero">
-      <div class="container">
-        <div class="page-hero-inner">
-          <div class="pill">Contact</div>
-          <h1>Parlons de ton projet.</h1>
-          <p class="lead">
-            Remplis le formulaire et je reviens vers toi rapidement.
-          </p>
-        </div>
+  <main class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="reveal">Contact</h2>
+        <p class="reveal">Raconte-moi ton projet : je te réponds avec un cadre clair (devis + étapes).</p>
       </div>
-    </section>
 
-    <section class="section">
-      <div class="container contact-grid">
-        <div class="card contact-card reveal">
-          <h2>Formulaire</h2>
-          <form class="form" action="#" method="post" autocomplete="on">
-            <div class="form-row">
-              <label>
-                Nom
-                <input type="text" name="name" placeholder="Ton nom" required />
-              </label>
-
-              <label>
-                Email
-                <input type="email" name="email" placeholder="ton@email.com" required />
-              </label>
+      <div class="split">
+        <section class="form reveal" aria-label="Formulaire de contact">
+          <form id="contactForm">
+            <div class="field-row">
+              <div>
+                <label for="name">Nom</label>
+                <input id="name" name="name" type="text" placeholder="Ton nom" autocomplete="name" />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="ton@email.com" autocomplete="email" />
+              </div>
             </div>
 
-            <div class="form-row">
-              <label>
-                Téléphone (optionnel)
-                <input type="tel" name="phone" placeholder="[optionnel]" />
-              </label>
+            <div style="height:12px"></div>
+
+            <div class="field-row">
+              <div>
+                <label for="phone">Téléphone (optionnel)</label>
+                <input id="phone" name="phone" type="tel" placeholder="[TON_TÉLÉPHONE]" autocomplete="tel" />
+              </div>
+              <div>
+                <label for="subject">Sujet</label>
+                <input id="subject" name="subject" type="text" placeholder="Devis / Landing page / Refondre..." />
+              </div>
             </div>
 
-            <label>
-              Message
-              <textarea name="message" rows="5" placeholder="Décris ton projet : objectifs, pages, délai..." required></textarea>
-            </label>
+            <div style="height:12px"></div>
+
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Décris ton besoin (objectif, nombre de pages, deadline si tu as)..."></textarea>
+            </div>
 
             <div class="form-actions">
               <button class="btn btn-primary" type="submit">Envoyer</button>
-              <a class="btn btn-ghost" href="services.html">Voir les services</a>
-            </div>
-
-            <div class="fineprint">
-              Conseil : connecte ce formulaire à un service (Formspree, Netlify Forms, backend, etc.) si tu veux recevoir les messages.
+              <div class="note">Réponse sous : <strong>[24-48h]</strong> (à adapter)</div>
             </div>
           </form>
-        </div>
+        </section>
 
-        <aside class="contact-aside reveal">
-          <div class="pill pill-accent">Infos directes</div>
-          <div class="aside-block">
-            <div class="aside-title">Téléphone</div>
-            <div class="aside-value">[0606988417]</div>
+        <aside class="reveal">
+          <div class="step">
+            <div class="step-top">
+              <div class="num">✦</div>
+              <h3>Infos directes</h3>
+            </div>
+            <p style="margin:0; color: var(--muted); line-height: 1.7;">
+              Téléphone : <strong>[0606988417]</strong><br/>
+              Email : <strong>[superside@outlook.fr]</strong>
+            </p>
           </div>
 
-          <div class="aside-block">
-            <div class="aside-title">email</div>
-            <div class="aside-value">[Superside@outlook.fr]</div>
+          <div style="height:14px"></div>
+
+          <div class="step">
+            <div class="step-top">
+              <div class="num">⚙</div>
+              <h3>Note</h3>
+            </div>
+            <p style="margin:0; color: var(--muted); line-height: 1.7;">
+              Le formulaire ici est une démo (pas d’envoi réel).
+              Connecte-le à ton backend ou à un service d’envoi pour recevoir les demandes.
+            </p>
           </div>
 
-          <div class="divider"></div>
+          <div style="height:14px"></div>
 
-          <div class="muted">
-            Tu peux aussi ajouter tes réseaux (LinkedIn, GitHub, Instagram) ici.
-          </div>
-
-          <a class="btn btn-wide btn-ghost" href="realisations.html" style="margin-top: 16px;">
-            Voir les réalisations
-          </a>
+          <a class="btn reveal" href="mentions-legales.html">Mentions légales</a>
         </aside>
       </div>
-    </section>
+    </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <div class="footer-brand">
-          <span class="brand-mark" aria-hidden="true">◆</span>
-          <span>MC G. S.</span>
-        </div>
-        <div class="footer-copy">Développement Web créatif — du design à la mise en ligne.</div>
-      </div>
-      <div class="footer-right">
-        <a href="mentions-legales.html">Mentions légales</a>
+  <footer class="footer">
+    <div class="container footer-row">
+      <div class="small">© <span id="year"></span> MC G. S. — Tous droits réservés.</div>
+      <div class="small">
+        <a href="mentions-legales.html">Mentions légales</a> •
         <a href="confidentialite.html">Confidentialité</a>
       </div>
     </div>
-
-    <div class="container footer-bottom">
-      <span>© <span id="year"></span> MC G. S. — Tous droits réservés</span>
-    </div>
   </footer>
 
-  <script src="app.js"></script>
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <strong>Info</strong>
+    <p></p>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="assets/script.js"></script>
 </body>
 </html>
