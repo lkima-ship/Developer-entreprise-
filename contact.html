@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — MC G. S.</title>
+  <meta name="description" content="Contacte MC G. S. : formulaire et coordonnées." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">◆</span>
+        <span class="brand-text">MC G. S.</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="services.html">Services</a>
+        <a href="realisations.html">Réalisations</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+    <div class="header-glow" aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-inner">
+          <div class="pill">Contact</div>
+          <h1>Parlons de ton projet.</h1>
+          <p class="lead">
+            Remplis le formulaire et je reviens vers toi rapidement.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div class="card contact-card reveal">
+          <h2>Formulaire</h2>
+          <form class="form" action="#" method="post" autocomplete="on">
+            <div class="form-row">
+              <label>
+                Nom
+                <input type="text" name="name" placeholder="Ton nom" required />
+              </label>
+
+              <label>
+                Email
+                <input type="email" name="email" placeholder="ton@email.com" required />
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>
+                Téléphone (optionnel)
+                <input type="tel" name="phone" placeholder="[optionnel]" />
+              </label>
+            </div>
+
+            <label>
+              Message
+              <textarea name="message" rows="5" placeholder="Décris ton projet : objectifs, pages, délai..." required></textarea>
+            </label>
+
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Envoyer</button>
+              <a class="btn btn-ghost" href="services.html">Voir les services</a>
+            </div>
+
+            <div class="fineprint">
+              Conseil : connecte ce formulaire à un service (Formspree, Netlify Forms, backend, etc.) si tu veux recevoir les messages.
+            </div>
+          </form>
+        </div>
+
+        <aside class="contact-aside reveal">
+          <div class="pill pill-accent">Infos directes</div>
+          <div class="aside-block">
+            <div class="aside-title">Téléphone</div>
+            <div class="aside-value">[TON_TÉLÉPHONE]</div>
+          </div>
+
+          <div class="aside-block">
+            <div class="aside-title">Email</div>
+            <div class="aside-value">[TON_EMAIL]</div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="muted">
+            Tu peux aussi ajouter tes réseaux (LinkedIn, GitHub, Instagram) ici.
+          </div>
+
+          <a class="btn btn-wide btn-ghost" href="realisations.html" style="margin-top: 16px;">
+            Voir les réalisations
+          </a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <div class="footer-brand">
+          <span class="brand-mark" aria-hidden="true">◆</span>
+          <span>MC G. S.</span>
+        </div>
+        <div class="footer-copy">Développement Web créatif — du design à la mise en ligne.</div>
+      </div>
+      <div class="footer-right">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="confidentialite.html">Confidentialité</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> MC G. S. — Tous droits réservés</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
